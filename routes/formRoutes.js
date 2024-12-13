@@ -6,6 +6,9 @@ const multer = require("multer");
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
+router.get("/",(req,res)=>{
+    res.send("Hello World")
+})
 
 router.post("/save", upload.single("headerImage"), async (req, res) => {
     try {
