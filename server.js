@@ -7,9 +7,9 @@ const app = express();
 
 
 app.use(cors({
-    origin: 'https://form-builder-front-qcsx.onrender.com', // Frontend URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
-    credentials: true, // Include credentials (optional)
+    origin: 'https://form-builder-front-qcsx.onrender.com',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    credentials: true,
 }));
 app.use(bodyParser.json());
 
