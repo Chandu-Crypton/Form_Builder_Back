@@ -6,7 +6,11 @@ const bodyParser = require("body-parser");
 const app = express();
 
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://form-builder-front-qcsx.onrender.com', // Frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+    credentials: true, // Include credentials (optional)
+}));
 app.use(bodyParser.json());
 
 
